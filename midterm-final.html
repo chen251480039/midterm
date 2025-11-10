@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的研究所推甄介紹</title>
+    <style>
+        body {
+            font-family: "Microsoft JhengHei", sans-serif;
+            margin: 0;
+            background-color: #f4f7f6;
+            color: #333;
+        }
+
+        header {
+            background-color: #1976D2;
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+        }
+
+        nav {
+            background-color: #333;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav li {
+            margin: 0 15px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+        }
+
+        nav a:hover {
+            background-color: #1976D2;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        section {
+            padding: 40px;
+        }
+
+        /* 關於我 */
+        .intro {
+            background-color: #E3F2FD;
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .intro img {
+            width: 150px;
+            border-radius: 20px; 
+        }
+
+        .intro h2 {
+            color: #1976D2;
+        }
+
+        /* 卡片區：研究所介紹 */
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .card {
+            background-color: white;
+            width: 300px;
+            margin: 15px;
+            border-radius: 15px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card img {
+            width: 100%;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+        }
+
+        .card h3 {
+            text-align: center;
+            color: #1976D2;
+        }
+
+        .card p {
+            padding: 0 15px 15px;
+        }
+
+        /* 申請資料區 */
+        .requirement {
+            background-color: #E8F5E9;
+            padding: 40px;
+        }
+
+        table {
+            margin: 0 auto;
+            border-collapse: collapse;
+            width: 90%;
+        }
+
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+
+        th {
+            background-color: #1976D2;
+            color: white;
+        }
+
+        /* 響應式 */
+        @media (max-width: 600px) {
+            nav ul {
+                flex-direction: column;
+            }
+            .container {
+                flex-direction: column;
+                align-items: center;
+            }
+            table {
+                width: 100%;
+            }
+        }
+
+        /* 動畫 */
+        @keyframes fadeIn {
+            from {opacity: 0;}
+            to {opacity: 1;}
+        }
+
+        header, .intro, .card, .requirement {
+            animation: fadeIn 1s ease;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+
+        .slideshow {
+            position: relative;
+            height: 400px;
+            overflow: hidden;
+            margin: 40px 0;
+        }
+
+        .slideshow div {
+            position: absolute;
+            width: 40%;               
+            height: 100%;             
+            left: 50%;                
+            top: 50%;                
+            transform: translate(-50%, -50%);
+            background-size: cover;
+            background-position: center;
+            opacity: 0;           
+            animation: fade 25s infinite;
+        }
+
+        .slideshow div:nth-child(1) {background-image: url('1.jpg'); animation-delay: 0s;}
+        .slideshow div:nth-child(2) {background-image: url('2.jpg'); animation-delay: 5s;}
+        .slideshow div:nth-child(3) {background-image: url('3.jpg'); animation-delay: 10s;}
+        .slideshow div:nth-child(4) {background-image: url('4.jpg'); animation-delay: 15s;}
+        .slideshow div:nth-child(5) {background-image: url('5.jpg'); animation-delay: 20s;}
+
+        @keyframes fade {
+            0% {opacity: 0;}
+            10% {opacity: 1;}
+            20% {opacity: 1;}
+            30% {opacity: 0;}
+            100% {opacity: 0;}
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>我的研究所推甄介紹</h1>
+        <p>網頁設計期中作業 | 使用 HTML + CSS</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#intro">關於我</a></li>
+            <li><a href="#schools">研究所介紹</a></li>
+            <li><a href="#requirement">申請資料</a></li>
+            <li><a href="#contact">聯絡資訊</a></li>
+        </ul>
+    </nav>
+
+    <section id="intro" class="intro">
+        <h2>關於我</h2>
+        <img src="my photo.webp" alt="我的照片">
+        <p>大家好，我是正在準備研究所推甄的學生。</p>
+        <p>我主要申請數學統計及相關研究所，期望未來能結合人工智慧與資訊科學，從事資料分析與智慧系統相關研究。</p>
+    </section>
+
+    <section id="schools">
+        <h2 style="text-align:center;">我想申請的研究所</h2>
+        <div class="container">
+            <div class="card">
+                <img src="https://www.nthu.edu.tw//public/images/logo.png" alt="清大計算與建模科學研究所">
+                <h3>清大計算與建模科學研究所</h3>
+                <p>計算與建模科學研究所（計科所）於2016年創立...</p>
+                <p><a href="https://icms.site.nthu.edu.tw//" target="_blank">官方網站</a></p>
+            </div>
+            <div class="card">
+                <img src="https://pgw.udn.com.tw/gw/photo.php?u=https://uc.udn.com.tw/photo/2023/05/18/realtime/22127272.jpeg&x=0&y=0&sw=0&sh=0&sl=W&fw=800&exp=3600&w=930&nt=1" alt="交大 數據科學與工程研究所">
+                <h3>交通大學 數據科學與工程研究所</h3>
+                <p>因應大數據領域迅速發展之全球趨勢...</p>
+                <p><a href="https://www.cs.nycu.edu.tw/intro/organization/data" target="_blank">官方網站</a></p>
+            </div>
+            <div class="card">
+                <img src="https://www.ciai.ntnu.edu.tw/wp-content/uploads/2025%E5%B8%AB%E5%A4%A7%E7%94%A2%E5%89%B5%E5%AD%B8%E9%99%A2-logo%E5%8A%A0%E5%AD%97-768x720.png" alt="台師AI跨域應用研究所">
+                <h3>臺灣師範大學 AI 跨域應用研究所</h3>
+                <p>該研究所主要研發方向在人工智慧、物聯網科技、智慧製造技術等...</p>
+                <p><a href="https://www.ciai.ntnu.edu.tw/index.php/about/enroll/" target="_blank">官方網站</a></p>
+            </div>
+        </div>
+    </section>
+
+    <section id="requirement" class="requirement">
+        <h2 style="text-align:center;">各研究所申請資料要求</h2>
+        <table>
+            <!-- 表格內容保持不變 -->
+        </table>
+    </section>
+
+    <section id="contact" class="intro">
+        <h2>聯絡資訊</h2>
+        <table>
+            <tr><th>項目</th><th>內容</th></tr>
+            <tr><td>姓名</td><td>陳立心</td></tr>
+            <tr><td>Email</td><td>example@mail.com</td></tr>
+            <tr><td>學校</td><td>OO大學 資訊工程學系</td></tr>
+        </table>
+    </section>
+
+    <section class="slideshow">
+        <h2>大學生活</h2>
+        <div></div>
+        <div></div>
+    </section>
+
+    <footer>
+        <p>© 2025 我的研究所推甄介紹 | HTML & CSS 期中作業</p>
+    </footer>
+
+</body>
+</html>
